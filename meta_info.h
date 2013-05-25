@@ -28,12 +28,13 @@ struct class_meta
 };
 
 // ugly way to initialize members
-#define ADD_MEMBER_1(STRUCT, a)                                                        members[0] = MEMBER_INFO(STRUCT, a);
-#define ADD_MEMBER_2(STRUCT, a, b)               ADD_MEMBER_1(STRUCT, a)              members[1] = MEMBER_INFO(STRUCT, b);
-#define ADD_MEMBER_3(STRUCT, a, b, c)            ADD_MEMBER_2(STRUCT, a, b)           members[2] = MEMBER_INFO(STRUCT, c);
-#define ADD_MEMBER_4(STRUCT, a, b, c, d)         ADD_MEMBER_3(STRUCT, a, b, c)        members[3] = MEMBER_INFO(STRUCT, d);
-#define ADD_MEMBER_5(STRUCT, a, b, c, d, e)      ADD_MEMBER_4(STRUCT, a, b, c, d)     members[4] = MEMBER_INFO(STRUCT, e);
-#define ADD_MEMBER_6(STRUCT, a, b, c, d, e, f)   ADD_MEMBER_5(STRUCT, a, b, c, d, e)  members[5] = MEMBER_INFO(STRUCT, f);
+#define ADD_MEMBER_1(STRUCT, a)                                                           members[0] = MEMBER_INFO(STRUCT, a);
+#define ADD_MEMBER_2(STRUCT, a, b)                ADD_MEMBER_1(STRUCT, a)                 members[1] = MEMBER_INFO(STRUCT, b);
+#define ADD_MEMBER_3(STRUCT, a, b, c)             ADD_MEMBER_2(STRUCT, a, b)              members[2] = MEMBER_INFO(STRUCT, c);
+#define ADD_MEMBER_4(STRUCT, a, b, c, d)          ADD_MEMBER_3(STRUCT, a, b, c)           members[3] = MEMBER_INFO(STRUCT, d);
+#define ADD_MEMBER_5(STRUCT, a, b, c, d, e)       ADD_MEMBER_4(STRUCT, a, b, c, d)        members[4] = MEMBER_INFO(STRUCT, e);
+#define ADD_MEMBER_6(STRUCT, a, b, c, d, e, f)    ADD_MEMBER_5(STRUCT, a, b, c, d, e)     members[5] = MEMBER_INFO(STRUCT, f);
+#define ADD_MEMBER_7(STRUCT, a, b, c, d, e, f, g) ADD_MEMBER_6(STRUCT, a, b, c, d, e, f)  members[6] = MEMBER_INFO(STRUCT, g);
 
 //! template specialization
 //! e.g. call META(data, 3, x1, x2, x3); after defining
