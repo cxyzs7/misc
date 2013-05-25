@@ -1,18 +1,17 @@
 #ifndef _META_INFO_H
 #define _META_INFO_H
 
-#include <string>
 #include <typeinfo>
 
 //! struct to contain meta info for each class member
 struct member_meta
 {
   member_meta() {}
-  member_meta(const char* _type, const char* _name, const size_t _size, const size_t _offset):type(_type), name(_name), size(_size), offset(_offset) { }
+  member_meta(const char* _type, const char* _name, const int _size, const int _offset):type(_type), name(_name), size(_size), offset(_offset) { }
   const char* type;
   const char* name;
-  size_t size;
-  size_t offset;
+  int size;
+  int offset;
 };
 
 //! macro to create a member_meta
